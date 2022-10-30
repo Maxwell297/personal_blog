@@ -1,0 +1,47 @@
+<div class="card" data-aos="fade-up">
+    <div id="disqus-container" class="card-content">
+        <div id="disqusjs-app"></div>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@3.0.0-experimental.7/dist/browser/styles/disqusjs.css">
+        <script src="https://cdn.jsdelivr.net/npm/disqusjs@3.0.0-experimental.7/dist/browser/disqusjs.es2015.umd.min.js"></script>
+        <script>
+            function forceDisqusJS() {
+                try {
+                    localStorage.setItem('dsqjs_mode', 'dsqjs');
+                } catch (o) {
+                }
+                location.reload();
+            }
+
+            var disqusjs = new DisqusJS({
+                shortname: 'https-maxwell297-github-io',
+                siteName: "MaxwellYao's Blog · 姚佳瑞的博客",
+                identifier: "", // "https://suka.js.org/DisqusJS/",
+                url: "", // "https://suka.js.org/DisqusJS/",
+                api: "https://disqus.com/api/",
+                apikey: 'b6Nfnq0cJQWFkJg6M0cVOQxOkIWOpZbsRaZBK39hNDScEb78e6AfG7nHDQPADpSl',
+                admin: 'MaxwellYao',
+                adminLabel: 'MaxwellYao~'
+            });
+
+            function destroyDisqusJS() {
+                disqusjs.destroy();
+            }
+
+            function renderDisqusJS() {
+                disqusjs.render('#disqusjs-app');
+            }
+
+            renderDisqusJS();
+        </script>
+        <!-- <section class="comments" id="comments">
+            <div id="disqus_thread"></div>
+            <script>
+                var dsqjs = new DisqusJS({
+                    shortname: '<%- theme.disqusjs.shortname %>',
+                    apikey: '<%- theme.disqusjs.apikey %>',
+                    api: '<%- theme.disqusjs.api %>'
+                });
+            </script>
+        </section> -->
+    </div>
+</div>
